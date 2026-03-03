@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JSON Formatter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>JSON Formatter</h1>
+
+    <div class="controls">
+      <button onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+  </header>
+
+  <div class="editor-container">
+
+    <!-- LEFT SIDE (INPUT) -->
+    <!-- LEFT SIDE (INPUT) -->
+<div class="editor-box">
+  <div class="editor-header">
+    <h3>Unformatted JSON</h3>
+    <div class="box-actions">
+      <button onclick="formatJSON()">Format</button>
+      <button onclick="clearAll()">Clear</button>
+    </div>
+  </div>
+
+  <div class="editor-wrapper">
+    <pre id="input-highlight" class="json-output"></pre>
+    <textarea id="input" class="editor-textarea"
+      placeholder="Paste raw JSON here..."></textarea>
+  </div>
+</div>
+
+    <!-- RIGHT SIDE (OUTPUT) -->
+    <div class="editor-box">
+  <div class="editor-header">
+    <h3>Formatted JSON</h3>
+    <div class="box-actions">
+      <button onclick="minifyJSON()">Minify</button>
+      <button onclick="copyOutput()">Copy</button>
+    </div>
+  </div>
+
+  <pre id="output" class="json-output"></pre>
+</div>
+
+  </div>
+
+  <div id="status"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
